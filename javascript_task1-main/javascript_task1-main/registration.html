@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration form</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <main>
+        <div class="register">
+            <h2>REGISTRATION FORM</h2>
+            <form role="form" onsubmit="signUp(event);" autocomplete="off">
+                <div class="form-group">
+                    <input type="text" name="fname" id="fname" placeholder="First Name" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="email" name="email" id="email" placeholder="Email Address" required
+                        title="Contact's email (format: xxx@xxx.xxx)"
+                        pattern="[a-zA-Z0-9!#$%&amp;'*+\/=?^_`{|}~.-]+@[a-zA-Z-]+(\.[a-zA-Z-]+)*">
+                </div>
+                <div class="form-group">
+                    <input type="password" name="pwd" id="pwd" placeholder="Password" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="mobile" id="mobile" placeholder="Mobile" required
+                        pattern="[6-9]{1}[0-9]{9}" title="Phone number with 6-9 and remaing 9 digit with 0-9"
+                        maxlength="10">
+                </div>
+                <div class="form-group">
+                    <input type="date" name="dob" id="dob" placeholder="Date Of Birth" required>
+                </div>
+                <div class="group">
+                    <label>gender</label>
+
+                    &nbsp;&nbsp;&nbsp;
+                    <input type="radio" value="male" name="gender" id="male" required>
+                    &nbsp;
+                    <span id="male">male</span>
+                    &nbsp;&nbsp;&nbsp;
+                    <input type="radio" value="female" name="gender" id="female" required>
+                    &nbsp;
+                    <span id="female">female</span>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Sign Up</button>
+                </div>
+            </form>
+        </div>
+        <p>Already a member? <a href="/login.html">Sign In</a></p>
+    </main>
+
+    <script src="./register.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.form-group{ margin: 20px 0; }
+.form-group input{ height: 30px; width: 100%; padding: 5px; }
+button{ 
+    background: orangered; 
+    color: #fff; 
+    padding: 10px; 
+    border: solid 1px orangered;
+    cursor: pointer;
+    }
+
+html{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body{
+    background-image:url("images.jfif");
+    background-repeat: no-repeat;
+     background-size: 100% 280%;
+}
+main{
+    width:400px;
+    margin: 100px auto 0px auto;
+}
+h2{
+    text-align: center;
+    padding: 20px;
+    font-family: sans-serif;
+    color: orangered;
+}
+div.register{
+    background-color: rgba( 0,0,0,0.5);
+        width: 100%;
+    font-size: 18px;
+    border:1px soid rgba(255,255,255,0.3);
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+    color: #fff;
+}
+form{
+    margin: 40px;
+}
+
+input.form-group{
+    width:300px;
+    border:1px solid #ddd;
+    border-radius: 3px;
+    outline: 0;
+    padding: 7px;
+    background-color: #fff;
+    box-shadow: inset 1px 1px 5px rgba(0,0,0,0.3);
+}
+
+p{
+    font-size: 20px;
+    margin-left: 5px;
+    padding-bottom: 10px;
+}

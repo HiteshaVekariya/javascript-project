@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile view</title>
+    <link rel="stylesheet" href="profileview.css" type="text/css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="left">
+            <img src="photo.jpg" alt="user" width="150" height="50%">
+            <h4 class="bigname"> </h4>
+            <br>
+            <button type="button" name="EditProfile" id="submit"><a href="profile.html">Edit profile</a></button>
+        </div>
+        <div class="right">
+            <div class="info">
+                <h3>Information</h3>
+                <div class="info_data">
+                    <div class="data">
+                        <h4>Name</h4>
+                        <p class="name"></p>
+                    </div>
+                    <div class="data">
+                        <h4>Email</h4>
+                        <p class="email"></p>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <div class="to_data">
+                <div class="data">
+                    <h4>mobile</h4>
+                    <p class="mobile"></p>
+                </div>
+                <div class="data">
+                    <h4> Date Of Birth</h4>
+                    <p class="dob"></p>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="dataof">
+                <div class="data">
+                    <h4>gender</h4>
+                    <p class="gender"></p>
+                </div>
+                <div class="data">
+                    <h4>change password</h4>
+                    <input type="text" class="text1" required>
+                    <button type="submit" class="edpwds" onclick="edpwd()">reset password</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        let userdata = JSON.parse(localStorage.getItem('formData'));
+        let user = JSON.parse(localStorage.getItem("userlogin"));
+        console.log(user);
+
+
+        document.querySelector('.name').textContent = `${user[0].fname}`;
+        document.querySelector('.email').textContent = `${user[0].email}`;
+        document.querySelector('.mobile').textContent = `${user[0].mobiles}`;
+        document.querySelector('.dob').textContent = `${user[0].dob}`;
+        document.querySelector('.bigname').textContent = `${user[0].fname}`;
+        document.querySelector('.gender').textContent = `${user[0].gender}`;
+
+        function edpwd(e) {
+            console.log('hii')
+
+
+            if (document.querySelector('.text1').classList.contains('view')) {
+                if (document.querySelector('.text1').value === '' || undefined || null) {
+                    alert("please enter your password");
+                    return;
+                }
+                user[0].pwd = document.querySelector('.text1').value;
+                document.querySelector('.text1').classList.remove('view');
+                userdata.map(item => {
+                    if (item.Id === user[0].Id) {
+                        item.pwd = user[0].pwd;
+                    }
+                });
+                localStorage.setItem('formData', JSON.stringify(userdata));
+                localStorage.setItem('userlogin', JSON.stringify(user));
+                return;
+            }
+            document.querySelector('.text1').classList.add('view');
+            document.querySelector('.text1').value = `${user[0].pwd}`;
+            e.preventDefault();
+
+        }
+
+    </script>
+
+</body>
+
+</html>

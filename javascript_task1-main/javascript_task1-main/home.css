@@ -1,0 +1,301 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+background-image:url("images.jfif") ;
+background-repeat: no-repeat;
+background-size: 100% 100%;
+}
+
+header {
+  width: 100%;
+  height: auto;
+ }
+ 
+nav {
+  background-color:black;
+  width: 100%;
+  height: 13vh;
+  padding: 10px;
+justify-content: space-around;
+   display: flex; 
+}
+
+nav .navlist {
+  color:orangered;
+  font-size: 2rem;
+}
+nav .navlist:hover{
+   color: rgb(165, 53, 13); 
+  text-decoration: underline;
+}
+
+.random{
+  position: relative;
+  background: white;
+  height: auto;
+  width: 100%;
+  align-items: center;
+}
+.mydiv{
+  font-size: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: red;
+
+}
+
+.time{
+  font-size: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: red;
+}
+
+
+
+.todo-add {
+  float: left;
+  position: relative;
+  border: 1px solid rgb(235, 80, 8);
+  background-color: rgb(177, 95, 48);
+  color: rgb(226, 143, 65);
+  font-size: 3vh;
+  margin: auto;
+  width: 70vh;
+  padding: 0vh;
+  margin-right: 15vh;
+}
+.left h1{
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+.container {
+  position: absolute;
+  height: 20pc;
+  width: 20pc;
+  margin: auto;
+  top: 60vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 5.5vh;
+}
+
+.addText {
+  position: absolute;
+  height: 5px;
+  width: 60%;
+  margin: auto;
+  top: 25px;
+  left: 4vh;
+  outline: none;
+  border: none;
+  padding: 2vh;
+  padding-right: 2.5vh;
+}
+.addBtn {
+  position: absolute;
+  height: 4vh;
+  width: 4vh;
+  margin: auto;
+  top: 15px;
+  right: 35px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+}
+.addBtn img {
+  position: absolute;
+  height: 3vh;
+  top: 2.3vh;
+  right: 0;
+  bottom: 0;
+}
+.list {
+  position: absolute;
+  height: 65%;
+  width: 100%;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.list::-webkit-scrollbar {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+
+
+.element {
+  position: relative;
+  height: fit-content;
+  width: 45vh;
+  margin: 1vh;
+  right: 1.9vh;
+  text-align: left;
+  transition: 0.2s;
+  padding: 10px;
+  background: #ffff;
+  cursor: pointer;
+  border-radius: 0.2vh;
+  padding-right: 6vh;
+  word-wrap: break-word;
+  top: 1.5vh;
+}
+
+.element:hover {
+  transform: scale(1.2);
+}
+
+.tick {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  height: 3vh;
+  bottom: 0;
+  right: 5vh;
+}
+
+.delete1 {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  height: 4vh;
+  bottom: 0;
+  right: 1vh;
+  bottom: 0.2vh;
+}
+
+.update {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  height: 6vh;
+  bottom: 0;
+  right: 8vh;
+}
+.hitesha{
+  position: relative;
+  margin-left: 80%;
+  margin-top: 10px;
+  margin-right: 30px;
+  width: 50px;
+  display: none;
+
+}
+
+.hitesha.dis{
+  display: block;
+}
+
+
+.gifs {
+  width: fit-content;
+  max-width: fit-content;
+
+
+  border: #222;
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+}
+
+#gif-wrap {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #000;
+  background-size: 50vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+}
+
+#gif-logo {
+  position: fixed;
+  top: 0.5rem;
+  right: 0.5rem;
+  border-radius: 30px;
+  padding: 0 1rem;
+  background: #000;
+}
+.wather{
+  color: rgb(0, 0, 0);
+      display: inline-block;
+      left: 50px 0;
+      width: auto;
+      height: 15vh;
+      padding-right: 30px;
+  }
+
+  .completedtodo{
+  display: flex;
+   background-color: transparent;
+    box-sizing: border-box;
+  font-size: 23px;
+  font: bold;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 5.5vh rgb(172, 109, 47);
+  width: 50%;
+  height: 150px;
+  margin-left: 40%;
+  margin-right:25%;
+  margin-top: 10px;
+  justify-content: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+   }
+ .padding{
+         display: flex;
+       background-color:transparent;
+        box-sizing: border-box;
+      font-size: 23px;
+      font: bold;
+      backdrop-filter: blur(5px);
+      box-shadow: 0 0 5.5vh rgb(172, 109, 47);
+       width: 50%;
+     height: 140px;
+      margin-left: 40%;
+      margin-right:25%;
+      margin-top: 10px; 
+      margin-bottom: 20px;
+      justify-content: center;
+        overflow-y: scroll;
+         overflow-x: hidden;
+      }
+      .sp{
+        margin-left: 40%;
+       font-weight: bold;
+        font-size: 20px;
+        color:black;
+        margin-bottom: 10px;
+
+      }
+  
+      .sp1{
+        margin-bottom: 10px;
+        font-weight: bold;
+        font-size: 20px;
+        color:black;
+      }
+      .p{
+        width: 100%;
+        height: 5vh;
+        border-bottom: 1px solid white;
+
+      }

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>homepage</title>
+  <link rel="stylesheet" href="home.css" type="text/css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <p class="navlist"> home</a></p>
+      <p class="navlist"><a href="profileview.html" style="text-decoration: none; color: orangered;"> profile</a></p>
+      <p role="button" class="navlist" id="logout">logout</p>
+
+    </nav>
+  </header>
+  <div class="random" style="display: flex; justify-content: space-around;">
+    <!-- <div class="mydiv"></div> -->
+    <div class="wather">
+      <h1 id="temperature"></h1>
+<h2 id="description"></h2>
+<p id="location"></p>
+  </div>
+    <div class="time"></div>
+    <div class="img" style="padding-top: 10px;"></div>
+  </div>
+
+  <section class="left">
+    <h1>To-Do Dashboard</h1>
+    <div class="todo-add">
+      <div class="container">
+        <input type="text" class="addText" placeholder="Add Task" id="addtaskinput" />
+        <button class="addBtn" id="addtaskbtn" onclick="addTask()">
+          Add
+        </button>
+
+        <button type="button" class="hitesha" id="savetaskbtn" onclick="edit()">Save Task</button>
+        <div class="list"></div>
+      </div>
+    </div>
+   </section>
+   <section class="left">
+    <span class="sp1">Completed-Task:- </span>
+    <div class="completedtodo" role="scrollbar"> 
+      <div class="com" style="color:black;"></div>
+    </div>
+    <br>
+    <span class="sp">Padding-Task:- </span>
+    <div class="padding" role="scrollbar">
+      <br>
+      <div class="pd" style="color:black;"></div>
+    </div>
+   </section>
+  <script src="./register.js"></script>
+</body>
+
+</html>
